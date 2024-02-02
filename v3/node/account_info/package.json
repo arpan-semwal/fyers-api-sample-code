@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "fyers-api-v3": "^1.0.3",
+    "opn": "^6.0.0"
+  }
+}
