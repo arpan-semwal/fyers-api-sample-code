@@ -1,0 +1,1 @@
+{"level":"debug","datetime":"2024-02-03T16:11:31.222Z","message":"getHistory response","data":{"candles":[[1690934400,609.85,610.5,594.1,598.45,14977497],[1691020800,598.7,600.85,585,590.5,27774877]],"code":200,"message":"","s":"ok"},"functionName":"getHistory"}
