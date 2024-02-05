@@ -1,3 +1,5 @@
+const { fyersdata } = require("../livedata/livedata")
+
 const FyersAPI = require("fyers-api-v3").fyersModel
 
 var fyers = new FyersAPI()
@@ -18,5 +20,9 @@ fyers.getHistory(inp).then((response)=>{
 }).catch((err)=>{
     console.log(err)
 })
+
+module.exports = {
+    fyersdata :fyers,
+}
 
  

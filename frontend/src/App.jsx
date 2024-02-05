@@ -1,50 +1,51 @@
-import   { useEffect, useState } from 'react';
-import axios from "axios";
+import React, { useState, useEffect } from 'react';
+import { w3cwebsocket as W3CWebSocket } from 'websocket';
 
 const App = () => {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  
+  const [stockData, setStockData] = useState({});
+
   useEffect(() => {
-      const fetchFromApi = async () => {
-          try {
-              const url = "http://localhost:3002/getProfile";
-              const response = await axios.get(url);
-              console.log("API Response:", response.data);
-              setData(response.data);
-          } catch (error) {
-              console.error("Data fetch error", error);
-          } finally {
-              setLoading(false);
-          }
-      };
-  
-      fetchFromApi();
-  }, []);
-  
-  if (loading) {
-      return <p>Loading...</p>;
-  }
+    const client = new W3CWebSocket('ws://localhost:3003'); // Replace with your backend WebSocket URL
 
-    return (
-      <div>
-      {data ? (
-          <>
-              <p>fy_id : {data.data.fy_id}</p>
-              <p>Mobile Number : {data.data.mobile_number}</p>
-              <p>Email id : {data.data.email_id}</p>
-              <p>NAME : {data.data.name}</p>
-              <p>PIN_CHANGE_DATE : {data.data.pin_change_date}</p>
-              <p>Pw_To_expire : {data.data.pwd_to_expire}</p>
+    client.onopen = () => {
+      console.log('WebSocket Client Connected');
+    };
 
-              
-              <p></p>
-          </>
-      ) : (
-          <p>Loading...</p>
-      )}
-  </div>
-    );
+    client.onmessage = (message) => {
+      const receivedData = JSON.parse(message.data);
+      console.log('Received data from backend:', receivedData);
+
+      // Update state based on the stock symbol
+      setStockData((prevData) => ({
+        ...prevData,
+        [receivedData.symbol]: receivedData,
+      }));
+    };
+
+    client.onclose = () => {
+      console.log('WebSocket Client Closed');
+    };
+
+    return () => {
+      // Cleanup on component unmount
+      client.close();
+    };
+  }, []); // Empty dependency array to run the effect only once
+
+  return (
+    <div>
+      {Object.keys(stockData).map((symbol) => (
+        <div key={symbol}>
+          <h2>{symbol} Data</h2>
+          {stockData[symbol] ? (
+            <pre>{JSON.stringify(stockData[symbol], null, 2)}</pre>
+          ) : (
+            <p>Loading {symbol} data...</p>
+          )}
+        </div>
+      ))}
+    </div>
+  );
 };
 
 export default App;
