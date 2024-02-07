@@ -45,7 +45,7 @@ function onmsg(message) {
 }
 
 function onconnect() {
-    fyersdata.subscribe(['NSE:TCS-EQ', 'NSE:INFY-EQ', 'NSE:RELIANCE-EQ', 'NSE:HDFC-EQ']);
+    fyersdata.subscribe([ 'NSE:BANKNIFTY2420746000PE' ]);
     fyersdata.autoreconnect();
      
 }
