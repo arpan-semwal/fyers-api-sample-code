@@ -45,7 +45,7 @@ function onmsg(message) {
 }
 
 function onconnect() {
-    fyersdata.subscribe([ 'NSE:SBIN-EQ' ]);
+    fyersdata.subscribe([ 'NSE:SBIN-EQ','NSE:IDEA-EQ' ]);
     fyersdata.autoreconnect();
      
 }
