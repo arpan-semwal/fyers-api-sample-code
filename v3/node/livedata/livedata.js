@@ -33,7 +33,7 @@ server.on('upgrade', (request, socket, head) => {
 
 const FyersSocket = require("fyers-api-v3").fyersDataSocket;
 
-var fyersdata = new FyersSocket("6BQQUK21RL-100:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhcGkuZnllcnMuaW4iLCJpYXQiOjE3MDcyODYzODksImV4cCI6MTcwNzM1MjIwOSwibmJmIjoxNzA3Mjg2Mzg5LCJhdWQiOlsieDowIiwieDoxIiwieDoyIiwiZDoxIiwiZDoyIiwieDoxIiwieDowIl0sInN1YiI6ImFjY2Vzc190b2tlbiIsImF0X2hhc2giOiJnQUFBQUFCbHd4OTFMX1R4SXhCVENsQVktcWVYSWdtTGlXYzFQd19Vc1lmYk0yX2ZJOGQzM3RaZURJc2toYUFfaW5ZWlotVENFMHM2ZEZsdHMySEJkN0phSGY2VUJsNFZfZHFiWk5Ja2hMZFZHUENUdzA3emd3UT0iLCJkaXNwbGF5X25hbWUiOiJKQVRJTiBHVVBUQSIsIm9tcyI6IksxIiwiaHNtX2tleSI6ImVjNzUwNjdiMmQzYjZiMjQ5N2YwZDRjNGNhMmQ1ZWUyZmI3OGZiYTAzZGE3ZmUwOWNiNjA4MTkwIiwiZnlfaWQiOiJZSjAwODU3IiwiYXBwVHlwZSI6MTAwLCJwb2FfZmxhZyI6Ik4ifQ.xw44waEXP-Y7hKeK9kkn8r1t9Y6IxL280fScXMpuniI");
+var fyersdata = new FyersSocket("6BQQUK21RL-100:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhcGkuZnllcnMuaW4iLCJpYXQiOjE3MDc0NTc5MjEsImV4cCI6MTcwNzUyNTAwMSwibmJmIjoxNzA3NDU3OTIxLCJhdWQiOlsieDowIiwieDoxIiwieDoyIiwiZDoxIiwiZDoyIiwieDoxIiwieDowIl0sInN1YiI6ImFjY2Vzc190b2tlbiIsImF0X2hhc2giOiJnQUFBQUFCbHhiMkIwZTBnaUlILXlxTFZUMkpScXh2blZWVUFSSnZrLV9CMzVEc3dFakJ5YnNibUN0NVZmSXRsdW9wemJMUmpoUXllVnMyTVVhRW1qbVBFOUJtdjZmVW1JWVRBS21zSl8waktsaVJKU1B1S1dMVT0iLCJkaXNwbGF5X25hbWUiOiJKQVRJTiBHVVBUQSIsIm9tcyI6IksxIiwiaHNtX2tleSI6ImVjNzUwNjdiMmQzYjZiMjQ5N2YwZDRjNGNhMmQ1ZWUyZmI3OGZiYTAzZGE3ZmUwOWNiNjA4MTkwIiwiZnlfaWQiOiJZSjAwODU3IiwiYXBwVHlwZSI6MTAwLCJwb2FfZmxhZyI6Ik4ifQ.nVKG1ve4HGV4xD0yIrI6fj6NgdqEx2vWGJ3BkZ8RGhc");
 
 function onmsg(message) {
     // Send the received message to all connected clients
@@ -45,7 +45,7 @@ function onmsg(message) {
 }
 
 function onconnect() {
-    fyersdata.subscribe([ 'NSE:BANKNIFTY2420746000PE' ]);
+    fyersdata.subscribe([ 'NSE:SBIN-EQ' ]);
     fyersdata.autoreconnect();
      
 }
@@ -64,3 +64,4 @@ fyersdata.on("error", onerror);
 fyersdata.on("close", onclose);
 
 fyersdata.connect();
+//NSE:BANKNIFTY2420746000PE ,
