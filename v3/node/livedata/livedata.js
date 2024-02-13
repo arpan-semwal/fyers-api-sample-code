@@ -45,10 +45,12 @@ function onmsg(message) {
 }
 
 function onconnect() {
-    fyersdata.subscribe([ 'NSE:SBIN-EQ','NSE:IDEA-EQ' , 'BSE:SENSEX-INDEX' , 'BSE:BAJAJFINSV-A' ]);
+    fyersdata.subscribe([ 'NSE:SBIN-EQ','NSE:IDEA-EQ' ,  ]);
     fyersdata.autoreconnect();
      
 }
+
+//'BSE:SENSEX-INDEX' , 'BSE:BAJAJFINSV-A'
 
 function onerror(err) {
     console.log(err);
