@@ -6,7 +6,7 @@ const WebSocket = require('ws'); // Import the WebSocket library
 
 const app = express();
 app.use(cors());
-const PORT = process.env.PORT || 3003;
+const PORT = process.env.PORT || 3005;
 
 const server = app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`);
@@ -33,7 +33,7 @@ server.on('upgrade', (request, socket, head) => {
 
 const FyersSocket = require("fyers-api-v3").fyersDataSocket;
 
-var fyersdata = new FyersSocket("6BQQUK21RL-100:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhcGkuZnllcnMuaW4iLCJpYXQiOjE3MDc4MDA4MDcsImV4cCI6MTcwNzg3MDY0NywibmJmIjoxNzA3ODAwODA3LCJhdWQiOlsieDowIiwieDoxIiwieDoyIiwiZDoxIiwiZDoyIiwieDoxIiwieDowIl0sInN1YiI6ImFjY2Vzc190b2tlbiIsImF0X2hhc2giOiJnQUFBQUFCbHl2am5ONjVQeC1ucGhTTVJDWWF1TnhXcGlCT3cyd0NndkFUWEpXbUs3UlpzTF9zZWMzVnJacDQ2ckV0Q1RxdkI4ZEtpQkl3blRJZUo2ZVhEdmIxN084UldTRnMxV25jNkN0dmNVUFpYNGVJUFlIST0iLCJkaXNwbGF5X25hbWUiOiJKQVRJTiBHVVBUQSIsIm9tcyI6IksxIiwiaHNtX2tleSI6ImVjNzUwNjdiMmQzYjZiMjQ5N2YwZDRjNGNhMmQ1ZWUyZmI3OGZiYTAzZGE3ZmUwOWNiNjA4MTkwIiwiZnlfaWQiOiJZSjAwODU3IiwiYXBwVHlwZSI6MTAwLCJwb2FfZmxhZyI6Ik4ifQ.BhnReHCdTcltPPt5F-t9a4N505KW0qlRl26fGssaBHY");
+var fyersdata = new FyersSocket("6BQQUK21RL-100:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhcGkuZnllcnMuaW4iLCJpYXQiOjE3MDc4ODY0NTYsImV4cCI6MTcwNzk1NzAxNiwibmJmIjoxNzA3ODg2NDU2LCJhdWQiOlsieDowIiwieDoxIiwieDoyIiwiZDoxIiwiZDoyIiwieDoxIiwieDowIl0sInN1YiI6ImFjY2Vzc190b2tlbiIsImF0X2hhc2giOiJnQUFBQUFCbHpFZDREWHVaejV3SGI3NGVBWDR0TEtIU2RYQ19UUWtaN2JTZEdGbUhENkR1OGJpeW4yaDE0Q1FabzlMYTZLcEZCdnI4VVNYa3o4Q3NQbE5DSE9leTdJcVlOVGdRUW5GOWV5eThERUNOUUpKUVNwND0iLCJkaXNwbGF5X25hbWUiOiJKQVRJTiBHVVBUQSIsIm9tcyI6IksxIiwiaHNtX2tleSI6ImVjNzUwNjdiMmQzYjZiMjQ5N2YwZDRjNGNhMmQ1ZWUyZmI3OGZiYTAzZGE3ZmUwOWNiNjA4MTkwIiwiZnlfaWQiOiJZSjAwODU3IiwiYXBwVHlwZSI6MTAwLCJwb2FfZmxhZyI6Ik4ifQ.AMQII-VufKz90B0toS3hSwKry0qIxe9H-aNgkCtREDQ");
 
 function onmsg(message) {
     // Send the received message to all connected clients
