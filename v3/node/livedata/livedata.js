@@ -68,46 +68,4 @@ fyersdata.on("error", onerror);
 fyersdata.on("close", onclose);
 
 fyersdata.connect();
-// //NSE:BANKNIFTY2420746000PE ,
-
-// const express = require('express');
-// const cors = require('cors');
-// const WebSocket = require('ws');
-
-// const app = express();
-// app.use(cors());
-// const PORT = process.env.PORT || 3003;
-
-// const server = app.listen(PORT, () => {
-//     console.log(`Server is running on ${PORT}`);
-// });
-
-// const wss = new WebSocket.Server({ noServer: true });
-
-// wss.on('connection', (ws) => {
-//     ws.on('message', (message) => {
-//         // Handle messages from the frontend if needed
-//     });
-// });
-
-// server.on('upgrade', (request, socket, head) => {
-//     wss.handleUpgrade(request, socket, head, (ws) => {
-//         wss.emit('connection', ws, request);
-//     });
-// });
-
-// function getRandomPrice(min, max) {
-//     return (Math.random() * (max - min) + min).toFixed(2);
-// }
-
-// const minPrice = 100;
-// const maxPrice = 200;
-
-// setInterval(() => {
-//     const randomPrice = getRandomPrice(minPrice, maxPrice);
-//     wss.clients.forEach((client) => {
-//         if (client.readyState === WebSocket.OPEN) {
-//             client.send(randomPrice);
-//         }
-//     });
-// }, 1000); // Change the value (in milliseconds) to adjust how frequently the price updates
+ 
