@@ -45,11 +45,13 @@ function onmsg(message) {
 }
 
 function onconnect() {
-    fyersdata.subscribe([ 'NSE:SBIN-EQ','NSE:IDEA-EQ' ,  ]);
+    fyersdata.subscribe(['MCX:GOLDM24MARFUT']);
     fyersdata.autoreconnect();
      
 }
-
+//MCX:GOLDM24FEB64000CE
+//'NSE:GOLDM24MARFUT' , 'MCX:GOLD24MARFUT' ,
+//NSE:SBIN-EQ','NSE:IDEA-EQ' 
 //'BSE:SENSEX-INDEX' , 'BSE:BAJAJFINSV-A'
 
 function onerror(err) {

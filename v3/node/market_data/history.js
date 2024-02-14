@@ -9,15 +9,15 @@ fyers.setAppId("6BQQUK21RL-100")
 fyers.setRedirectUrl("https://127.0.0.1:3000/")
 
 // set accessToken
-fyers.setAccessToken("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhcGkuZnllcnMuaW4iLCJpYXQiOjE3MDY4NjQ4NDMsImV4cCI6MTcwNjkyMDIyMywibmJmIjoxNzA2ODY0ODQzLCJhdWQiOlsieDowIiwieDoxIiwieDoyIiwiZDoxIiwiZDoyIiwieDoxIiwieDowIl0sInN1YiI6ImFjY2Vzc190b2tlbiIsImF0X2hhc2giOiJnQUFBQUFCbHZMRExVTkNqd0RWaFZLT01hb0ZWYnlsRkhPTkRWLS1keW9fMm9xU3daLUhDeE9PRmdEaklabElBUGFzQVd6R3RUY0NqNWxkSlNocG1NTlptQVgzVHBBR3RscWxaZmZJNjhQWllNcVg4eDhqVlpMTT0iLCJkaXNwbGF5X25hbWUiOiJKQVRJTiBHVVBUQSIsIm9tcyI6IksxIiwiaHNtX2tleSI6bnVsbCwiZnlfaWQiOiJZSjAwODU3IiwiYXBwVHlwZSI6MTAwLCJwb2FfZmxhZyI6Ik4ifQ.UjjRczJ4mgLogW6EBbZiG88a9CzVbTg-3HLwUNraZZs");
+fyers.setAccessToken("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhcGkuZnllcnMuaW4iLCJpYXQiOjE3MDc4MDA4MDcsImV4cCI6MTcwNzg3MDY0NywibmJmIjoxNzA3ODAwODA3LCJhdWQiOlsieDowIiwieDoxIiwieDoyIiwiZDoxIiwiZDoyIiwieDoxIiwieDowIl0sInN1YiI6ImFjY2Vzc190b2tlbiIsImF0X2hhc2giOiJnQUFBQUFCbHl2am5ONjVQeC1ucGhTTVJDWWF1TnhXcGlCT3cyd0NndkFUWEpXbUs3UlpzTF9zZWMzVnJacDQ2ckV0Q1RxdkI4ZEtpQkl3blRJZUo2ZVhEdmIxN084UldTRnMxV25jNkN0dmNVUFpYNGVJUFlIST0iLCJkaXNwbGF5X25hbWUiOiJKQVRJTiBHVVBUQSIsIm9tcyI6IksxIiwiaHNtX2tleSI6ImVjNzUwNjdiMmQzYjZiMjQ5N2YwZDRjNGNhMmQ1ZWUyZmI3OGZiYTAzZGE3ZmUwOWNiNjA4MTkwIiwiZnlfaWQiOiJZSjAwODU3IiwiYXBwVHlwZSI6MTAwLCJwb2FfZmxhZyI6Ik4ifQ.BhnReHCdTcltPPt5F-t9a4N505KW0qlRl26fGssaBHY");
 
 
 var inp={
     "symbol":"NSE:SBIN-EQ",
     "resolution":"D",
     "date_format":"0",
-    "range_from":"1622097600",
-    "range_to":"1622097685",
+    "range_from":"1612497600",
+    "range_to":"1612497685",
     "cont_flag":"1"
 }
 
