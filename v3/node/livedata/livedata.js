@@ -6,7 +6,7 @@ const WebSocket = require('ws'); // Import the WebSocket library
 
 const app = express();
 app.use(cors());
-const PORT = process.env.PORT || 3005;
+const PORT = process.env.PORT || 3003;
 
 const server = app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`);

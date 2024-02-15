@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import   { useState, useEffect } from 'react';
 import { w3cwebsocket as W3CWebSocket } from 'websocket';
-import './App.css';
+ 
 
 const App = () => {
   const [stockData, setStockData] = useState({});
