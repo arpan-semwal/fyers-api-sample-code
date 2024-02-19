@@ -78,7 +78,7 @@ function App() {
             <br/>
             {gainer.open_price}
             <br/>
-            
+            {gainer.high_price}
           </li>
         ))}
       </ul>
