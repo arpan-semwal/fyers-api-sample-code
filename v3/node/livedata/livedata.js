@@ -33,7 +33,7 @@ server.on('upgrade', (request, socket, head) => {
 
 const FyersSocket = require("fyers-api-v3").fyersDataSocket;
 
-var fyersdata = new FyersSocket("6BQQUK21RL-100:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhcGkuZnllcnMuaW4iLCJpYXQiOjE3MDc4ODY0NTYsImV4cCI6MTcwNzk1NzAxNiwibmJmIjoxNzA3ODg2NDU2LCJhdWQiOlsieDowIiwieDoxIiwieDoyIiwiZDoxIiwiZDoyIiwieDoxIiwieDowIl0sInN1YiI6ImFjY2Vzc190b2tlbiIsImF0X2hhc2giOiJnQUFBQUFCbHpFZDREWHVaejV3SGI3NGVBWDR0TEtIU2RYQ19UUWtaN2JTZEdGbUhENkR1OGJpeW4yaDE0Q1FabzlMYTZLcEZCdnI4VVNYa3o4Q3NQbE5DSE9leTdJcVlOVGdRUW5GOWV5eThERUNOUUpKUVNwND0iLCJkaXNwbGF5X25hbWUiOiJKQVRJTiBHVVBUQSIsIm9tcyI6IksxIiwiaHNtX2tleSI6ImVjNzUwNjdiMmQzYjZiMjQ5N2YwZDRjNGNhMmQ1ZWUyZmI3OGZiYTAzZGE3ZmUwOWNiNjA4MTkwIiwiZnlfaWQiOiJZSjAwODU3IiwiYXBwVHlwZSI6MTAwLCJwb2FfZmxhZyI6Ik4ifQ.AMQII-VufKz90B0toS3hSwKry0qIxe9H-aNgkCtREDQ");
+var fyersdata = new FyersSocket("6BQQUK21RL-100:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhcGkuZnllcnMuaW4iLCJpYXQiOjE3MDgzMjI1NzUsImV4cCI6MTcwODM4OTA1NSwibmJmIjoxNzA4MzIyNTc1LCJhdWQiOlsieDowIiwieDoxIiwieDoyIiwiZDoxIiwiZDoyIiwieDoxIiwieDowIl0sInN1YiI6ImFjY2Vzc190b2tlbiIsImF0X2hhc2giOiJnQUFBQUFCbDB1OFB6TkplaWItS0pBSmNzSjRmRC04aTNGVWlrRno1OVl5OXYtVVpLSlM5UkhsT1lnMG5CMmVWOEp1Vk9scHV6Q0ZKaS1OckdNTVFDV29Ncl9acXA3YTJUVmpJVEVabXV1UTAxN2dNeW9uXzBuST0iLCJkaXNwbGF5X25hbWUiOiJKQVRJTiBHVVBUQSIsIm9tcyI6IksxIiwiaHNtX2tleSI6ImVjNzUwNjdiMmQzYjZiMjQ5N2YwZDRjNGNhMmQ1ZWUyZmI3OGZiYTAzZGE3ZmUwOWNiNjA4MTkwIiwiZnlfaWQiOiJZSjAwODU3IiwiYXBwVHlwZSI6MTAwLCJwb2FfZmxhZyI6Ik4ifQ.8A5TnE0rixDSx-eUrepBDr1wcec9zmbwoBQ_Ow6qAAk");
 
 function onmsg(message) {
     // Send the received message to all connected clients
@@ -45,9 +45,9 @@ function onmsg(message) {
 }
 
 function onconnect() {
-    fyersdata.subscribe(['MCX:GOLDM24MARFUT']);
+    fyersdata.subscribe(['MCX:GOLDM24MARFUT', 'NSE:IDEA-EQ', 'NSE:SBIN-EQ']);
     fyersdata.autoreconnect();
-     
+
 }
 //MCX:GOLDM24FEB64000CE
 //'NSE:GOLDM24MARFUT' , 'MCX:GOLD24MARFUT' ,
@@ -68,4 +68,3 @@ fyersdata.on("error", onerror);
 fyersdata.on("close", onclose);
 
 fyersdata.connect();
- 
